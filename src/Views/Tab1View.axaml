@@ -4,5 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Test.Views.Tab1View">
-  Welcome to Avalonia!
+  <StackPanel>
+      <Label>Hello</Label>
+      <Label Content="{Binding Text}" />
+  </StackPanel>
 </UserControl>

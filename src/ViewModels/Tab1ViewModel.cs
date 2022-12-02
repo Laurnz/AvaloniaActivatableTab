@@ -7,20 +7,10 @@ namespace Test.ViewModels;
 
 public class Tab1ViewModel : ViewModelBase
 {
+    public string Text { get; } = "Loo";
+
     public Tab1ViewModel()
     {
-        this.WhenActivated(disposables =>
-        {
-            Debugger.Break(); // Activated
 
-            Mock<IDisposable> mock = new();
-            mock.Setup(x => x.Dispose())
-                .Callback(() =>
-                 {
-                     Debugger.Break(); // Got deactivated
-                 });
-
-            disposables.Add(mock.Object);
-        });
     }
 }
